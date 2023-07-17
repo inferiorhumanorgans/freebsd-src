@@ -641,7 +641,13 @@ On entry,
 .Va pfrio_buffer[pfrio_size]
 contains a valid writeable buffer for
 .Vt pfr_table
-structures.
+structures.  If
+.Va pfrio_table
+is populated the
+.Va pfrt_anchor
+and
+.Va pfrt_flags
+fields will be used to filter the results.
 .Va pfrio_esize
 must be the size of
 .Vt struct pfr_table .
@@ -650,6 +656,13 @@ On exit,
 contains the number of tables written into the buffer.
 If the buffer is too small, the kernel does not store anything but just
 returns the required buffer size, without error.
+.Pp
+For possible values of
+.Va pfrt_flags ,
+consult the
+.Dv PFR_TFLAG_*
+values in
+.Aq Pa net/pfvar.h .
 .It Dv DIOCRGETTSTATS Fa "struct pfioc_table *io"
 This call is like
 .Dv DIOCRGETTABLES
