@@ -604,9 +604,9 @@ On entry,
 must point to an array of
 .Vt struct pfr_table
 containing at least
-.Vt pfrio_size
+.Va pfrio_size
 elements.
-.Vt pfrio_esize
+.Va pfrio_esize
 must be the size of
 .Vt struct pfr_table .
 On exit,
@@ -627,9 +627,9 @@ On entry,
 must point to an array of
 .Vt struct pfr_table
 containing at least
-.Vt pfrio_size
+.Va pfrio_size
 elements.
-.Vt pfrio_esize
+.Va pfrio_esize
 must be the size of
 .Vt struct pfr_table .
 On exit,
@@ -676,9 +676,9 @@ On entry,
 must point to an array of
 .Vt struct pfr_table
 containing at least
-.Vt pfrio_size
+.Va pfrio_size
 elements.
-.Vt pfrio_esize
+.Va pfrio_esize
 must be the size of
 .Vt struct pfr_table .
 On exit,
@@ -701,9 +701,9 @@ contains the table ID and
 must point to an array of
 .Vt struct pfr_addr
 containing at least
-.Vt pfrio_size
+.Va pfrio_size
 elements to add to the table.
-.Vt pfrio_esize
+.Va pfrio_esize
 must be the size of
 .Vt struct pfr_addr .
 On exit,
@@ -732,9 +732,9 @@ contains the table ID and
 must point to an array of
 .Vt struct pfr_addr
 containing at least
-.Vt pfrio_size
+.Va pfrio_size
 elements to delete from the table.
-.Vt pfrio_esize
+.Va pfrio_esize
 must be the size of
 .Vt struct pfr_addr .
 On exit,
@@ -751,9 +751,9 @@ contains the table ID and
 must point to an array of
 .Vt struct pfr_addr
 containing at least
-.Vt pfrio_size
+.Va pfrio_size
 elements which become the new contents of the table.
-.Vt pfrio_esize
+.Va pfrio_esize
 must be the size of
 .Vt struct pfr_addr .
 Additionally, if
@@ -814,9 +814,9 @@ contains the table ID and
 must point to an array of
 .Vt struct pfr_addr
 containing at least
-.Vt pfrio_size
+.Va pfrio_size
 elements to be cleared from the table.
-.Vt pfrio_esize
+.Va pfrio_esize
 must be the size of
 .Vt struct pfr_addr .
 On exit,
@@ -831,9 +831,9 @@ contains the table ID and
 must point to an array of
 .Vt struct pfr_addr
 containing at least
-.Vt pfrio_size
+.Va pfrio_size
 elements, each of which will be tested for a match in the table.
-.Vt pfrio_esize
+.Va pfrio_esize
 must be the size of
 .Vt struct pfr_addr .
 On exit, the kernel updates the
@@ -852,7 +852,7 @@ On entry,
 must point to an array of
 .Vt struct pfr_table
 containing at least
-.Vt pfrio_size
+.Va pfrio_size
 elements.
 .Va pfrio_esize
 must be the size of
