@@ -642,6 +642,9 @@ On entry,
 contains a valid writeable buffer for
 .Vt pfr_table
 structures.
+.Va pfrio_esize
+must be the size of
+.Vt struct pfr_table .
 On exit,
 .Va pfrio_size
 contains the number of tables written into the buffer.
@@ -653,6 +656,9 @@ This call is like
 but is used to get an array of
 .Vt pfr_tstats
 structures.
+.Va pfrio_esize
+must be the size of
+.Vt struct pfr_tstats .
 .Bd -literal
 struct pfr_tstats {
 	struct pfr_table pfrts_t;
@@ -689,6 +695,8 @@ Clear all addresses in a table.
 On entry,
 .Va pfrio_table
 contains the table to clear.
+.Va pfrio_esize
+must be set to 0.
 On exit,
 .Va pfrio_ndel
 contains the number of addresses removed.
